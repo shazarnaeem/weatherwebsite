@@ -4,7 +4,7 @@ A simple weather website that shows real-time weather data using a public weathe
 
 ## 🔗 Live Demo
 
-👉 [Click here to view the live site at weather.netlify.app)
+👉 [Click here to view the live site at myforcast.netlify.app)
 
 
 ## 🛠️ Features
