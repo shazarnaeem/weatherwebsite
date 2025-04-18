@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+    <!-- Font Awesome for better weather icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather <span>Forecast</span></h1>
+            <p>Real-time weather updates at your fingertips</p>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for a city...">
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="location-button">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Use My Location</span>
+            </button>
+        </div>
+        
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+        
+        <div class="error-message"></div>
+        
+        <div class="weather-container">
+            <div class="weather-card">
+                <div class="location-date">
+                    <h2 id="location">City, Country</h2>
+                    <p id="date">Date</p>
+                </div>
+                
+                <div class="current-weather">
+                    <div class="temp-container">
+                        <div class="temperature" id="temperature">--°C</div>
+                        <div class="temp-unit-toggle">
+                            <button class="active" id="celsius">°C</button>
+                            <span>|</span>
+                            <button id="fahrenheit">°F</button>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-description">
+                        <div class="weather-icon" id="weather-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <p id="weather-desc">Weather Description</p>
+                    </div>
+                </div>
+                
+                <div class="details-container">
+                    <div class="detail-box">
+                        <i class="fas fa-temperature-low"></i>
+                        <div class="detail-info">
+                            <div class="detail-title">Feels Like</div>
+                            <div class="detail-value" id="feels-like">--°C</div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-box">
+                        <i class="fas fa-tint"></i>
+                        <div class="detail-info">
+                            <div class="detail-title">Humidity</div>
+                            <div class="detail-value" id="humidity">--%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-box">
+                        <i class="fas fa-wind"></i>
+                        <div class="detail-info">
+                            <div class="detail-title">Wind Speed</div>
+                            <div class="detail-value" id="wind-speed">-- m/s</div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-box">
+                        <i class="fas fa-compress-alt"></i>
+                        <div class="detail-info">
+                            <div class="detail-title">Pressure</div>
+                            <div class="detail-value" id="pressure">-- hPa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast-container">
+                <h3 class="forecast-title">5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecast">
+                    <!-- Forecast cards will be inserted here by JS -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created with <i class="fas fa-heart"></i> by Modern Weather App Team</p>
+            <p>Powered by OpenWeather API</p>
+        </footer>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
